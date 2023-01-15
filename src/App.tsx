@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
 
+import {Route, Routes} from "react-router-dom";
+import Header from "./layout/header";
+
 function App() {
   return (
-    <div>
-      <header>
+    <Routes>
+        <Route element={<Header/>} path={'*'}>
 
-      </header>
-    </div>
+        </Route>
+    </Routes>
   );
 }
 
