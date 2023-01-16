@@ -1,12 +1,13 @@
-import classes from './header.module.scss';
+import classes from './Header.module.scss';
 import {Outlet, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {RootState} from "../store";
 import logo from '../assets/logo512.png';
-import Button from "../UI/button";
+import Button from "../UI/Button";
+import Clickable from "../UI/Clickable";
 
 function Header() {
-    const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+    const isLoggedIn = useSelector((state: RootState) => state.auth.isAuthenticated);
     const nav = useNavigate();
 
     return (
@@ -15,13 +16,14 @@ function Header() {
                 <img src={logo} alt="CTF Battle logo"/>
                 <h1>CTF BATTLE</h1>
             </div>
-            <nav>
+            <nav className={classes.navigation}>
                 { isLoggedIn ?
                     <>
-
+                        GUGUGAGA
                     </> :
                     <>
-
+                        <Clickable onClick={() => nav('/login')}>Login</Clickable>
+                        <Button onClick={() => nav('/signup')}>Sign Up</Button>
                 </> }
             </nav>
             <Outlet/>

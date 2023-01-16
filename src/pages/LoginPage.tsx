@@ -3,7 +3,7 @@ import {RootState} from "../store";
 
 
 function LoginPage() {
-    const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+    const isLoggedIn = useSelector((state: RootState) => state.auth.isAuthenticated);
 
     return (
         <div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import {Route, Routes} from "react-router-dom";
-import Header from "./layout/header";
+import Header from "./layout/Header";
 
 function App() {
   return (
