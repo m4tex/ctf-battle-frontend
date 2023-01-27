@@ -11,14 +11,14 @@ interface AuthState {
 
 const initialState = {
     isAuthenticated: false,
-    user: null,
-} : AuthState;
+    user: {},
+};
 
 const authSlice = createSlice({ name: 'auth', initialState, reducers: {
     login(state) {
-        state.isLoggedIn = true;
+        state.isAuthenticated = true;
         state.user = {
-
+            name: 'asddsa'
         }
     }
 }});

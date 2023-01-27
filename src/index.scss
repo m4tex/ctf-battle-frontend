@@ -15,8 +15,20 @@ body {
 }
 
 .interactive {
+  cursor: pointer;
+  user-select: none;
+  
   &:hover {
     color: lightgray;
     border-color: lightgray;
   }
+}
+
+.card {
+  background-color: #353535;
+  padding: 26px;
+  margin-inline: auto;
+
+  width: fit-content;
+  border-radius: 4px;
 }

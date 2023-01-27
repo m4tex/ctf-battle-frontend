@@ -12,7 +12,7 @@ function Header() {
 
     return (
         <header className={classes.header}>
-            <div className={classes.logo}>
+            <div className={classes.logo} onClick={() => nav('/')}>
                 <img src={logo} alt="CTF Battle logo"/>
                 <h1>CTF BATTLE</h1>
             </div>
@@ -26,9 +26,16 @@ function Header() {
                         <Button onClick={() => nav('/signup')}>Sign Up</Button>
                 </> }
             </nav>
-            <Outlet/>
         </header>
     )
 }
+
+function HeaderSpacer() {
+    return  (
+        <div className={classes.spacer} />
+    )
+}
+
+export { HeaderSpacer };
 
 export default Header;
